@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gokhankocpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gokhankocpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gokhankocpipelinesjavascriptdocker 
+          image: kuberrg.azurecr.io/gokhankocpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
